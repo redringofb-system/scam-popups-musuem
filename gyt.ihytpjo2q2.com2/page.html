@@ -1,0 +1,304 @@
+<html lang="en_US">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Congratulations!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href='fonts.googleapis.com/css?family=Roboto+Condensed%7COpen+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="gyt.ihytpjo2q2.com/production/_templates/spin-casino_MASTER/css/style.css" media="all">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script>
+        var redirect = "";
+        if (redirect === 'yes') {
+            document.location.href = "/o/8GWA8KHE/6011aed2-dd29-11eb-8326-f53cf467b2ff";
+        }
+        var raw_prize_value = 4909349.05
+
+        function
+        formatPrizeValue(value) {
+
+            var currency_symbol = "$";
+            var format_data = {
+                "symbolOnLeft": true,
+                "spaceBetweenAmountAndSymbol": false,
+                "thousandsSeparator": ",",
+                "decimalSeparator": ".",
+                "decimalDigits": 2
+            }
+            var
+                space_between = (format_data.spaceBetweenAmountAndSymbol ? " " : "")
+
+            value = value.toString().split('.');
+            value[0] = value[0].split("").reverse().join("").match(/.{1,3}/g);
+            value[0].forEach(function(element, i) {
+                value[0][i] = element.split("").reverse().join("");
+            });
+            value[0] = value[0].reverse().join(format_data.thousandsSeparator);
+            value = value[0] + format_data.decimalSeparator + value[1];
+            value = (format_data.symbolOnLeft ? currency_symbol + space_between + value : value + space_between + currency_symbol);
+
+            return value;
+
+        }
+
+        function initLiveJackpot() {
+            function updateJackpot() {
+                $jackpot_display = $("#myTargetElement");
+                raw_prize_value = parseFloat(parseFloat(raw_prize_value) + 0.01).toFixed(2);
+                $jackpot_display.html(formatPrizeValue(raw_prize_value));
+            }
+
+            function recursiveUpdate() {
+                updateJackpot();
+                setTimeout(function() {
+                    recursiveUpdate();
+                }, Math.floor(Math.random() * 2500) + 100);
+            }
+
+            recursiveUpdate();
+        }
+
+        $(document).ready(function() {
+            initLiveJackpot();
+        });
+    </script>
+
+    <script>
+        var currency = "$";
+        $(document).ready(function() {
+
+            $(function() {
+                var $quote = $("#header_size");
+                var $btn_sz = $("#spin-step-1");
+
+                var $numWords = $quote.text().length;
+                var $numBtn = $btn_sz.text().length;
+
+                if (($numWords >= 20) && ($numWords < 30)) {
+                    $quote.css("font-size", "14px");
+                    $quote.css("margin-left", "22px");
+                    $('.mrg').css("margin-top", "150px");
+                }
+
+                if ($numBtn > 16) {
+                    $btn_sz.css("font-size", "20px");
+                }
+
+            });
+        });
+    </script>
+
+
+    <script type="text/javascript" src="/o/2XXQ6DLP/6011aed2-dd29-11eb-8326-f53cf467b2ff"></script>
+
+
+</head>
+
+<body>
+    <!-- enzhuwbyte2po -->
+
+    <div class='enzhuwbyte2po' style='display:none;'></div>
+
+
+
+
+    <body dir="ltr">
+        <header>
+            <h1 style="text-align:center;">
+                Become a millionaire today
+            </h1>
+        </header>
+        <main>
+            <div class="top">
+                <p>
+                    You are today's lucky winner! You have a chance to win the progressive jackpot of over <strong>$4,909,349.05</strong>! Just tap 'SPIN NOW' below to start playing!<br><br>Line up the coins and you will be selected.
+                </p>
+                <div style="padding-top: 5px; color: rgb(156, 156, 156); font-size: 11px;" id="todaysDate"></div>
+            </div>
+            <center>
+                <p style="padding: 5px;"> You have: <span id="spinsLeft">2</span> FREE spins </p>
+            </center>
+            <div class="block">
+                <div class="slot">
+                    <img class="overlay" src="gyt.ihytpjo2q2.com/production/_templates/spin-casino_MASTER/images/overlay.png">
+                    <img class="overlay2" src="gyt.ihytpjo2q2.com/production/_templates/spin-casino_MASTER/images/overlay2.png">
+                    <div class="spinners">
+                        <div class="reelcase">
+                            <img class="reel reelwidth" src="gyt.ihytpjo2q2.com/production/_templates/spin-casino_MASTER/images/dollar_reel.fs8.png">
+                        </div>
+                        <div class="reelcase">
+                            <img class="reel2 reelwidth" src="gyt.ihytpjo2q2.com/production/_templates/spin-casino_MASTER/images/dollar_reel.fs8.png">
+                        </div>
+                        <div class="reelcase">
+                            <img class="reel3 reelwidth" src="gyt.ihytpjo2q2.com/production/_templates/spin-casino_MASTER/images/dollar_reel.fs8.png">
+                        </div>
+                    </div>
+                    <div class="spin-popup">
+                        <div class="spin-popup-button" id="spin-step-1" onclick="stepOne()"><span>Spin Now</span>
+                        </div>
+                        <div class="spin-popup-dialog none" id="spin-step-2" onclick="stepTwo()">
+
+
+                            <div class="header-popup">SPIN AGAIN!</div>
+                            <div class="txt-popup" style=>
+                                Sorry you didn't line up a prize.<br/>But you have one more spin!
+                            </div>
+                            <div class="btn-container">
+                                <div class="btn-popup-msg" id="btn_sz">
+                                    <span>Spin Now</span>
+                                </div>
+                            </div>
+                            <img src="gyt.ihytpjo2q2.com/production/_templates/spin-casino_MASTER/images/spin1.png">
+                        </div>
+                        <div class="spin-popup-dialog none" id="spin-step-3" onclick="stepThree()">
+                            <div class="header-popup mrg-pop" id="header_size">CONGRATULATIONS!</div>
+                            <div class="txt-popup-2">You've won 50 FREE spins!<br/>You could become our next millionaire!</div>
+                            <div class="btn-container">
+                                <div class="btn-popup-msg mrg">
+                                    <span>Click Here to Claim Now!</span>
+                                </div>
+                            </div>
+                            <img src="gyt.ihytpjo2q2.com/production/_templates/spin-casino_MASTER/images/spin2.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="prizeselect none">
+                    <h3>Congratulations!</h3>
+                    <h4>You are selected to win a Gratorama Casino free bonus!</h4>
+                    <p>Redirecting you to the prize page</p>
+                    <img src="gyt.ihytpjo2q2.com/production/_templates/spin-casino_MASTER/images/loader.gif" alt="">
+                </div>
+                <a class="mmticker-link" href="/o/8GWA8KHE/6011aed2-dd29-11eb-8326-f53cf467b2ff">
+                    <div class="mmticker no_logo">
+                        <div class="mmprog no_logo_jackpot">
+                            <div class="progressive15 progressive-jackpot-ticker" data-jackpot-id="15">
+                                <span id="myTargetElement"></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </main>
+        <footer style="background: transparent none repeat scroll 0% 0%; border-top: 0px solid rgb(51, 51, 51); padding-bottom: 25px; max-width: 500px; margin: 20px auto 0; text-align: center;">
+            <div class="footer" style="font-size: 12px;">
+                <p>Copyright &#169; 2021 - All Rights Reserved.</p>
+                <div class="footer_links" style="padding-top: 5px; font-size: 11.5px">
+                    <a href="/terms" target="_blank">Terms and Conditions</a> - <a href="/affiliates" target="_blank">Affiliates</a>
+                </div>
+            </div>
+        </footer>
+        <script src="code.jquery.com/jquery-1.11.3.min.js"></script>
+
+        <script>
+            function stepOne() {
+                spinsCount();
+                document.getElementById("spin-step-1").className += " none";
+                /* start SPIN moving */
+                var spinnerReel = document.querySelectorAll(".spinners .reelcase img");
+                if (typeof spinnerReel === "object") {
+                    for (var i = 0; i < spinnerReel.length; i++) {
+                        var className = "spin" + (i + 1);
+                        if (spinnerReel[i].classList)
+                            spinnerReel[i].classList.add(className);
+                        else
+                            spinnerReel[i].className += ' ' + className;
+                    }
+                }
+                setTimeout(function() {
+                    document.getElementById("spin-step-2").className = "spin-popup-dialog";
+                }, 5500);
+            }
+
+            function stepTwo() {
+                spinsCount();
+                document.getElementById("spin-step-2").className += " none";
+                var spinnerReel = document.querySelectorAll(".spinners .reelcase img");
+                if (typeof spinnerReel === "object") {
+                    /* prepare for next SPIN moving */
+                    for (var i = 0; i < spinnerReel.length; i++) {
+                        var className = "spin" + (i + 1);
+                        if (spinnerReel[i].classList)
+                            spinnerReel[i].classList.remove(className);
+                        else
+                            spinnerReel[i].className = spinnerReel[i].className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+                    }
+                    /* start SPIN moving */
+                    for (var i = 0; i < spinnerReel.length; i++) {
+                        var className = "spin" + (i + 4);
+                        if (spinnerReel[i].classList)
+                            spinnerReel[i].classList.add(className);
+                        else
+                            spinnerReel[i].className += ' ' + className;
+                    }
+                    var spinTimer = setTimeout(function() {
+                        /* blink effect */
+                        var blinkCounter = 0;
+                        var overlay = document.querySelectorAll(".overlay")[0];
+                        var overlay2 = document.querySelectorAll(".overlay2")[0];
+                        if (overlay2.classList)
+                            overlay2.classList.add("red");
+                        else
+                            overlay2.className += " " + "red";
+                        var blinkTimer = setInterval(function() {
+                            blinkCounter++;
+                            if (blinkCounter % 2 == 0) {
+                                overlay.style.display = 'none';
+                                overlay2.style.display = 'block';
+                            } else {
+                                overlay.style.display = 'block';
+                                overlay2.style.display = 'none';
+                            }
+                            if (blinkCounter > 20) {
+                                clearInterval(blinkTimer);
+                            }
+                        }, 100);
+                    }, 5000);
+                }
+                setTimeout(function() {
+                    document.getElementById("spin-step-3").className = "spin-popup-dialog";
+                }, 7000);
+            }
+
+            function stepThree() {
+                window.onbeforeunload = null;
+                document.location.href = "/o/8GWA8KHE/6011aed2-dd29-11eb-8326-f53cf467b2ff";
+            }
+
+            function spinsCount() {
+                var spins = document.getElementById("spinsLeft");
+                if (typeof spins === "object") {
+                    var temp = parseInt(spins.innerHTML);
+                    if (!isNaN(temp) && temp > 0) {
+                        spins.innerHTML = temp - 1;
+                    }
+                }
+            }
+        </script>
+        <script>
+            window.onload = function() {
+                var today = new Date();
+                var dd = today.getDate();
+                var mm = today.getMonth()
+                var marray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+                var yyyy = today.getFullYear();
+                today = dd + " " + marray[mm] + " " + yyyy;
+                e = document.getElementById("todaysDate");
+                e.innerHTML = today;
+            }
+        </script>
+        <script>
+            window.addEventListener("popstate", function() {
+                if (location.hash === "#!/Congratulations!") {
+                    setTimeout(function() {
+                        location.replace("/o/8GWA8KHE/6011aed2-dd29-11eb-8326-f53cf467b2ff");
+                    }, 0);
+                }
+            }, false);
+        </script>
+    </body>
+
+</body>
+
+</html>

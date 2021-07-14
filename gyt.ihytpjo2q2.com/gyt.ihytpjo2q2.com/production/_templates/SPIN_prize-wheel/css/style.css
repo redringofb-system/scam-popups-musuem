@@ -1,0 +1,641 @@
+.banner {
+    position: absolute;
+    border-style: solid;
+    border-width: 0 0 150px 150px;
+    border-color: transparent transparent transparent #A72333;
+}
+
+.banner-text {
+    width: 130px;
+    position: absolute;
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    transform: rotate(-45deg);
+    left: -20px;
+    top: 6px;
+    line-height: 1;
+}
+
+.sweet-alert {
+    border: 2px solid #011f6a;
+}
+
+.button {
+    cursor: pointer;
+}
+.logo {
+    left: 5px;
+    width: 36px;
+    height: 20px;
+    background-image: url({{cdn("templates", "images/mnu2.png")}});
+    background-size: 20px 20px;
+    background-position: center center;
+}
+.ricon1 {
+    background-image: url({{cdn("templates", "images/icon-right.png")}});
+    background-position: right;
+    background-size: 30px 20px;
+    width: 39px;
+    height: 28px;
+    right: 10px;
+    top: 10px;
+}
+.header {
+    height: 32px;
+}
+.contestwrap p {
+    color: #776161;
+    font-size: small;
+}
+.spacer {
+    height: 10px;
+}
+.contestwrap {
+    padding: 1px 0 4px;
+}
+@media (max-width: 30em) {
+    .intro-modal {
+        background-position: calc(100% - 30px) bottom;
+    }
+}
+
+.wrapper {
+    text-align: center;
+}
+.button {
+    position: relative;
+}
+.subheader {
+    display: none;
+}
+.prize table {
+    margin: 0 auto;
+}
+.contestwrap table,
+td,
+tr {
+    border-collapse: collapse;
+}
+html {
+    font-family: sans-serif;
+    font-color: #000;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+    background: #f7f7f7;
+    min-width: 320px;
+    color: #000;
+}
+a,
+div,
+h2,
+h3,
+p,
+span {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #4485f6;
+}
+h3 {
+    color: #212121;
+}
+p {
+    color: #737373;
+}
+.header {
+    z-index: 9999;
+    display: block;
+    padding-top: 10px;
+    width: 100%;
+    height: 44px;
+    background-color: #232f3e;
+}
+.wrapper {
+    max-width: 800px;
+    width: 96%;
+    margin: 0 auto;
+}
+.contestwrap {
+    background-color: #fff;
+}
+.subheader {
+    background: rgba(0, 0, 0, 0.03);
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.contestwrap,
+.reviews {
+    border-bottom: 1px solid #e5e5e5;
+}
+td,
+tr {
+    padding: 8px 0 4px;
+}
+.spacer {
+    height: 20px;
+}
+.contestwrap {
+    box-shadow: 0 0 2px 2px #d2d2d2;
+    padding: 10px 0 4px;
+    border-radius: 3px;
+}
+.contestwrap {
+    -webkit-box-shadow: 0 0 2px 2px #d2d2d2;
+    -moz-box-shadow: 0 0 2px 2px #d2d2d2;
+}
+.toptext {
+    color: #212121;
+    font-size: small;
+}
+.contestwrap p {
+    color: #776161;
+    font-size: small;
+}
+.reviews {
+    box-shadow: 0 0 2px 2px #d2d2d2;
+}
+.prize {
+    width: 100%;
+}
+.reviews {
+    -webkit-box-shadow: 0 0 2px 2px #d2d2d2;
+    -moz-box-shadow: 0 0 2px 2px #d2d2d2;
+}
+.button {
+    top: 10px;
+    border: 1px solid;
+    padding: 10px 35px;
+    font-size: 0.9em;
+    color: #000;
+    background: #f1c860;
+    background: -webkit-linear-gradient(top, #f5d78e, #eeb933);
+    background: linear-gradient(to bottom, #f5d78e, #eeb933);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.logo,
+.ricon1 {
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+}
+.reviews {
+    background-color: #fff;
+    padding: 0;
+    border-radius: 3px;
+}
+hr {
+    opacity: 0.2;
+}
+.reviews .name {
+    font-weight: 700;
+    color: #333;
+}
+.reviews .text {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #555;
+    font-style: italic;
+}
+.reviews .date {
+    padding-top: 5px;
+    color: #888a89;
+    font-size: 10px;
+}
+.reviews table {
+    font-size: small;
+    padding: 0;
+}
+.roundimg {
+    border-radius: 50%;
+    width: 50px;
+}
+.reviews h2 {
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 20px 0 5px;
+}
+.commentpad {
+    padding-left: 10px;
+}
+.reviews hr {
+    opacity: 0;
+}
+.ricon1 {
+    background-image: url(icon-right.png);
+    background-position: right;
+    background-size: 39px 28px;
+    width: 39px;
+    height: 28px;
+    right: 10px;
+    top: 14px;
+}
+#pressButton {
+    cursor: pointer;
+}
+.spinAround,
+.spinAround2 {
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+#wheelCon,
+.sweet-alert {
+    overflow: hidden;
+}
+.sweet-alert,
+.sweet-overlay {
+    position: fixed;
+    display: none;
+}
+a {
+    text-decoration: none;
+}
+.sweet-overlay {
+    background-color: #000;
+    -ms-filter: alpha(opacity=40);
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10000;
+}
+.sweet-alert {
+    border: 2px solid #ffa400;
+    background-color: #fff;
+    font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif;
+    width: 478px;
+    padding: 17px;
+    border-radius: 5px;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    margin-left: -256px;
+    margin-top: -150px;
+    z-index: 99999;
+}
+.sweet-alert h2,
+.sweet-alert p {
+    padding: 10px 0 0;
+    position: relative;
+}
+@media all and (max-width: 540px) {
+    .sweet-alert {
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        left: 15px;
+        right: 15px;
+    }
+}
+.sweet-alert h2 {
+    color: #575757;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: none;
+    margin: 25px 0;
+    line-height: 30px;
+    display: block;
+}
+.sweet-alert p {
+    color: #797979;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: inherit;
+    float: none;
+    margin: 0;
+    line-height: normal;
+}
+a {
+    text-align: center;
+}
+.sweet-alert .sa-confirm-button-container {
+    display: inline-block;
+    position: relative;
+}
+.la-ball-fall,
+.visible {
+    display: block;
+}
+.sweet-alert .la-ball-fall {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -27px;
+    margin-top: 4px;
+    opacity: 0;
+    visibility: hidden;
+}
+.sweet-alert button {
+    background-color: #e84242;
+    color: #fff;
+    border: 0;
+    box-shadow: none;
+    font-size: 17px;
+    font-weight: 500;
+    -webkit-border-radius: 4px;
+    border-radius: 5px;
+    padding: 10px 32px;
+    margin: 10px 5px 0;
+    cursor: pointer;
+}
+.sweet-alert button:focus {
+    outline: 0;
+    box-shadow: 0 0 2px rgba(128, 179, 235, 0.5),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.sweet-alert button:hover {
+    background-color: #7ecff4;
+}
+.sweet-alert button:active {
+    background-color: #5dc2f1;
+}
+.sweet-alert button::-moz-focus-inner {
+    border: 0;
+}
+#pressButton,
+#wheelCon {
+    background-size: contain;
+}
+#firstpage,
+#wheelCon,
+.congrats,
+.prize,
+.timer {
+    background-color: #fff;
+}
+#devMockup,
+#secondpage {
+    display: none;
+}
+#firstpage,
+#wheelCon,
+.congrats,
+.prize,
+.timer {
+    border-radius: 3px;
+}
+#firstpage {
+    margin-bottom: 5px;
+    padding-top: 5px;
+}
+.name {
+    font-weight: 700;
+}
+.date {
+    font-size: 0.85em;
+    color: #9c9c9c;
+    margin: 2px 0;
+}
+.name {
+    color: #3c5a96;
+}
+#wheelCon {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#wheel {
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+}
+#pressButton {
+    position: absolute;
+    background-image: url(../images/spin_prize2.png);
+    width: 25%;
+    height: 0;
+    padding-top: 30.5%;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 110px;
+}
+#devMockup {
+    position: absolute;
+    max-width: 40%;
+    height: auto;
+    z-index: 3;
+}
+.congrats {
+    text-align: center;
+}
+.name {
+    font-size: 100%;
+}
+a.button {
+    text-decoration: none;
+}
+.fbimg {
+    margin: 10px 0 5px;
+}
+.prize {
+    margin-bottom: 5px;
+}
+.timer {
+    line-height: 1.5;
+}
+.spinAround {
+    -webkit-animation: spin 6.6s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0);
+    }
+    90% {
+        -webkit-transform: rotate(3110deg);
+        -ms-transform: rotate(3110deg);
+        transform: rotate(3110deg);
+    }
+    95% {
+        -webkit-transform: rotate(3108deg);
+        -ms-transform: rotate(3108deg);
+        transform: rotate(3108deg);
+    }
+    100% {
+        -webkit-transform: rotate(3109deg);
+        -ms-transform: rotate(3109deg);
+        transform: rotate(3109deg);
+    }
+}
+.spinAround2 {
+    -webkit-animation: spin2 6.6s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes spin2 {
+    0% {
+        -webkit-transform: rotate(3109deg);
+        -ms-transform: rotate(3109deg);
+        transform: rotate(3109deg);
+    }
+    90% {
+        -webkit-transform: rotate(6314deg);
+        -ms-transform: rotate(6314deg);
+        transform: rotate(6314deg);
+    }
+    95% {
+        -webkit-transform: rotate(6312deg);
+        -ms-transform: rotate(6312deg);
+        transform: rotate(6312deg);
+    }
+    100% {
+        -webkit-transform: rotate(6313deg);
+        -ms-transform: rotate(6313deg);
+        transform: rotate(6313deg);
+    }
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes rotateIn {
+    0% {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, -200deg);
+        transform: rotate3d(0, 0, 1, -200deg);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+@keyframes rotateIn {
+    0% {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, -200deg);
+        transform: rotate3d(0, 0, 1, -200deg);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+.rotateIn {
+    -webkit-animation-name: rotateIn;
+    animation-name: rotateIn;
+}
+.transparent {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+@media (min-width: 614px) {
+    #wheel {
+        width: 27vw;
+        left: 47vw;
+        top: 27vw;
+    }
+    #pressButton {
+        width: 6%;
+        top: 38% !important;
+        background-repeat: no-repeat;
+    }
+}
+body {
+    background: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    font-family: helvetica, arial, sans-serif;
+    font-size: small;
+}
+.toptext {
+    background: #fff;
+}
+.bounce {
+    display: inline-block;
+    -webkit-animation: a 0.6s ease infinite;
+    animation: a 0.6s ease infinite;
+    color: #ffa400;
+}
+@-webkit-keyframes a {
+    0%,
+    to {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0);
+    }
+    80% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+    }
+}
+@keyframes a {
+    0%,
+    to {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0);
+    }
+    80% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+    }
+}
+.contestwrap {
+    margin-bottom: 5px;
+}
+.toptext {
+    min-height: 40px;
+    color: #1e2330;
+    font-size: 11px;
+    padding: 8px;
+    border-radius: 3px;
+}
+.logo {
+    display: block;
+}
+td {
+    background-color: transparent;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+hr {
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    border: 0;
+    background: 0;
+    border-bottom: 1px #dadde1 solid;
+}
+.logo {
+    margin: 4px auto;
+}
+hr {
+    margin: 0 5px;
+}

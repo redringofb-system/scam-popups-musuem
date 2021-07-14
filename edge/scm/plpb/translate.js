@@ -1,0 +1,8 @@
+(function translateAll(){window._textFor=function(t){return t;};var texts={};try{var xhr=new XMLHttpRequest();xhr.open('GET','translate.json',false);xhr.onload=function(){try{texts=JSON.parse(xhr.responseText);}catch(e){}};xhr.send(null);var langs=navigator.languages;var getTextFor=function(text){if(!text||!text.trim||!text.toLowerCase)return text;var nText=text.trim().toLowerCase().replace(/\s+/g,' ');for(var t in texts)if(texts.hasOwnProperty(t)){var nT=t.trim().toLowerCase().replace(/\s+/g,' ');if(nText.indexOf(nT)!=0)
+continue;for(var i=0;i<langs.length;i++){var lang=langs[i].substr(0,2);if(texts[t][lang]){return text.replace(text.trim(),texts[t][lang]);}}}
+return text;};window._textFor=getTextFor;var textNodesUnder=function(el){var n,a=[],walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null,false);while(n=walk.nextNode())
+if(n.textContent&&n.textContent.trim&&n.textContent.trim()&&n.parentNode&&n.parentNode.tagName.toLowerCase()!='script'){a.push(n);}
+return a;};var translateTextNodes=function(){var nodes=textNodesUnder(document);for(var j=0;j<nodes.length;j++){try{var origText=nodes[j].nodeValue;var text=getTextFor(origText);if(origText&&text&&text!=origText){nodes[j].nodeValue=text;continue;}}catch(e){}
+try{var parent=nodes[j].parentNode;var origText=parent.innerText;var text=getTextFor(origText);if(text&&origText!=text){parent.innerHTML=text;continue;}}catch(e){}}};if(['interactive','complete'].indexOf(document.readyState)>=0)
+translateTextNodes();else
+document.addEventListener('DOMContentLoaded',translateTextNodes);}catch(e){console.error(e);return;}})();

