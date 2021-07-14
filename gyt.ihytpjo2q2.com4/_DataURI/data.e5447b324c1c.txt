@@ -1,0 +1,1 @@
+chrome-extension://bgnkhhnnamicmpeenaelnjfhikgbkllg/lib/libs/extended-css.js
